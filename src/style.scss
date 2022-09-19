@@ -16,7 +16,9 @@ body{
 
 header{
   grid-area: header;
-  // background-image: url("/src/img/gradient_header_1800.png");
+  background-image: url("img/gradient_header_1800.png");
+  background-position-x: center;
+  background-position-y: center;
   background-color: rgb(243, 172, 40);
   width: 100%;
 }
