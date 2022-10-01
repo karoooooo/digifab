@@ -58,7 +58,6 @@ img{
   color: rgb(30, 77, 82);
 }
 
-
 #gradient{
   grid-area: header;
   background-image: url("img/gradient_header_1800.png"); 
@@ -116,6 +115,7 @@ footer{
 }
 
 
+
 /*FOR SMALL SCREENS*/
 @media screen and (max-width: 650px) {
   #grid {
@@ -143,11 +143,12 @@ footer{
   main{
     background-color: rgba(243, 172, 40, 70);
   }
-  a: active {
+
+  a:active {
     color: white;
   }
 
-  #myname :active{
+  #myname:active{
     color: white;
   }
 
@@ -164,7 +165,7 @@ footer{
       "footer footer";
   } 
 
- #myname :hover{
+ #myname:hover{
     color: white;
   } 
 
