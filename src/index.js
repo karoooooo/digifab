@@ -8,10 +8,10 @@ function hideMenu (){
  }
 }
 
-function noPage (){
-  const showMessage = alert("Denne siden finnes ikke")
-  
-}
+// function noPage (){
+//   const showMessage = alert("Denne siden finnes ikke")
+
+// }
 
 /* 
 
