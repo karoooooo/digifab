@@ -62,7 +62,7 @@ body {
   img {
     border-radius: 50%;
     max-height: 7rem;
-    padding: 1em;
+    padding: 1rem;
   }
   
   .stylized-o {
@@ -154,6 +154,11 @@ body {
     text-decoration: wavy;
   }
 
+  img:active{
+    border: 0.5rem solid white; 
+    padding: 0;
+  }
+
   #myname:active {
     color: rgb(30, 77, 82);
   } 
@@ -184,7 +189,6 @@ body {
     align-items: center;
   }
 
-
   #nav-list {
     display: flex;
     flex-direction: row;
@@ -211,6 +215,11 @@ body {
   h1:hover {
     color:rgb(12, 28, 30);
     border-bottom: 2px solid white;
+  }
+
+  img:hover{
+    border: 0.5rem solid white; 
+    padding: 0;
   }
 
  #myname:hover {
