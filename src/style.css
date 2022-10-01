@@ -154,7 +154,7 @@ body {
     text-decoration: wavy;
   }
 
-  img:active{
+  img:active {
     border: 0.5rem solid white; 
     padding: 0;
   }
@@ -217,7 +217,7 @@ body {
     border-bottom: 2px solid white;
   }
 
-  img:hover{
+  img:hover {
     border: 0.5rem solid white; 
     padding: 0;
   }
