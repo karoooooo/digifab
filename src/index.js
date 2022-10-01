@@ -3,7 +3,7 @@ function hideMenu (){
 
  if(hamburger.style.display === "flex"){
   hamburger.style.display = "none";
- } else{
+ } else {
   hamburger.style.display = "flex";
  }
 }
