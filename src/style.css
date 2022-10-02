@@ -61,6 +61,7 @@ body {
   }
   
   .stylized-o {
+    font-style: none;
     font-weight: 700;
     color: rgb(30, 77, 82);
   }
