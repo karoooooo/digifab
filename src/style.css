@@ -239,6 +239,16 @@ body {
     flex: 1 1 25%;
   }
 
+  #projects {
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .projectarticle {
+    flex: 1 1 auto;
+  }
+
   #about-me{
     flex: 1 0 50%;
   }
