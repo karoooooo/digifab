@@ -112,7 +112,6 @@ body {
     gap: 1rem;
     flex-direction: column;
     justify-content: flex-end;
-    
   }
 
   #nav-list {
@@ -228,7 +227,7 @@ body {
   a:hover {
     color: white;
   }
-
+  
   h1:hover {
     color:rgb(12, 28, 30);
     border-bottom: 2px solid white;
