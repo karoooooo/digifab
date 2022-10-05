@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
+html {
+  font-size: calc(1em + 1vw);
+}
+
 body {
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #grid {
@@ -24,40 +30,54 @@ body {
       "footer";
   }
 
+  p {
+    /* font-weight: 400; */
+    letter-spacing: 0.1rem;
+  }
+
   a {
     text-decoration: none;
-    font-weight:bold;
+    font-weight: 700;
     color: rgb(30, 77, 82);
   }
 
+  header p, footer p{
+    font-family: 'Poppins'
+  }
+
+  footer a{
+    letter-spacing: 0.1rem;
+  }
+
+  .other-links {
+    color: white;
+  }
+    
+ 
   h1 {
-    color:rgb(12, 28, 30);
     letter-spacing: 1rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid orange;
-    font-size: 3rem;
+    font-size: 1.5rem;
+    font-weight: 900;
   }
 
   h2 {
-    margin: 1rem;
     letter-spacing: 0.5rem;
+    font-size: 1.2rem;
   }
   
   h3 {
-    letter-spacing: 0.5rem;
+     margin: 1rem;
+     letter-spacing: 0.5rem;
   }
   
   ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
-  
-  img {
-    border-radius: 50%;
-    max-height: 8rem;
-  }
-  
+    
   .stylized-o {
     font-weight: 700;
     color: rgb(30, 77, 82);
@@ -78,37 +98,47 @@ body {
   
   header {
     display: flex;
-    flex-flow: column wrap;
-    padding: 5% 5% 0 5%;
-    text-align: right;
+    flex-flow: row-reverse wrap;
+    padding: 5%;
     max-width: 100%;
+    justify-content: center;
+    align-content: flex-start;
   }
 
-  header h1{
-    align-self: flex-end;
-  }
-
-  header p{
-    align-self: flex-end;
+  #logolink {
+    flex: 1 1 auto;
+    display: flex;
   }
 
   header img{
-    min-width: 2rem;
+    border-radius: 50%;
+    max-width: 20%;
+    min-height: 20%;
+    width: 20%;
+    height: auto;
+    flex: 1 1 100%;
   }
 
-  #logolink{
-    align-self: flex-start;
-    flex: 1 1 auto;
+  #header-text{
+    flex: 1 1 80%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header p {
+    margin-right: 1rem;
+    text-align: right;
   }
 
   nav{
     grid-area: nav;
     display: flex;
     width: 100%;
-    padding: 5%;
-    gap: 1rem;
+    padding: 0 5% 5% 5%;
+    gap: 0.5rem;
     flex-direction: column;
-    justify-content: flex-start;
   }
 
   #myname {
@@ -119,8 +149,13 @@ body {
     display: none;
     flex-direction: column;
     align-content: space-around;
-    gap: 1rem;
-    padding-left: 3.5rem;
+    gap: 0.5rem;
+    padding: 0;
+    margin-left: 3.7rem;
+  }
+
+  aside {
+    display: none;
   }
 
   main {
@@ -139,7 +174,6 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1 1 20%;
-    line-height: 1.2rem;
     border: 2px solid white;
     border-radius: 5px;
   }
@@ -153,7 +187,7 @@ body {
     order:2;
   }
 
-  .project{
+  .project {
     order:3;
   }
 
@@ -176,11 +210,7 @@ body {
     max-width: 100%;
   }
 
-  .other-links {
-    font-weight: 700;
-    color: white;
-  }
-    
+
   /*------------------ ACTIONS --------------*/
   a:active {
     color: white;
@@ -216,17 +246,33 @@ body {
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "header header"
-      "nav main"
+      "aside main"
       "footer footer";
   } 
 
   nav {
     display: flex;
+    justify-content: center;
   }
 
   #nav-list {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #nav-list li{
+
+  }
+
+  #nav-list li a{
+    width: 100%;
+  }
+
+  aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
   }
 
   main {
@@ -272,7 +318,6 @@ body {
   }
   
   h1:hover {
-    color:rgb(12, 28, 30);
     border-bottom: 2px solid white;
   }
 
