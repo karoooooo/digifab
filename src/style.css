@@ -205,14 +205,16 @@ body {
     color: white;
     background-color: rgba(30, 77, 82, 70%);
     display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-    align-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
+    max-width: 100%;
   }
 
   footer .link{
     margin: 0;
+    align-self: center;
+    order: -1;
   }
 
 
@@ -312,6 +314,13 @@ body {
 
   article .link{
     justify-self: flex-end;
+  }
+
+  footer{
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
   }
 
   /*------------------ ACTIONS --------------*/
