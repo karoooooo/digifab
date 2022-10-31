@@ -225,6 +225,11 @@ body {
     color: white;
   }
 
+  article p > a:active {
+    color: rgb(30, 77, 82);
+    text-decoration: underline;
+  }
+
   .otherlinks:active {
     color: rgb(30, 77, 82);
   }
@@ -330,6 +335,11 @@ body {
 
   a:hover {
     color: white;
+  }
+
+  article p > a:hover {
+    color: rgb(30, 77, 82);
+    text-decoration: underline;
   }
 
   .link:hover{
