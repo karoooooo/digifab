@@ -314,11 +314,10 @@ body {
   #projects {
     flex-flow: column wrap;
     align-content: center;
-    justify-content: center;
   }
   
   .projectarticle {
-    flex: 1 1 100%;
+    flex: 1 0 100%;
   }
 
   .project_preview_img{
