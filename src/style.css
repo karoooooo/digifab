@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-/* Previously used font: &family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800*/
-
-
 * {
   box-sizing: border-box;
   margin: 0;
 }
+
+
+/*-------------------------Fonts & colors-----------------------------------*/
 
 html {
   font-size: calc(1em + 1vw);
@@ -16,74 +16,82 @@ body {
   font-family: 'Poppins', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+li, a {
+  font-size: 0.7rem;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  font-weight: 200;
+  font-size: 0.6rem;
+  line-spacing: 0.2rem;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: rgb(30, 77, 82);
+}
+
+.link, footer a {
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.other-links {
+  color: white;
+}    
+
+h1 {
+  letter-spacing: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid orange;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+h2 {
+  letter-spacing: 0.4rem;
+  font-size: 1rem;
+}
+
+h3 {
+  margin: 0.5rem;
+  letter-spacing: 0.3rem;
+}
+
+h4{
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+h5{
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.stylized-o {
+  font-weight: 700;
+  color: rgb(30, 77, 82);
+}
+
+
 #grid {
   display: grid;
   max-width: 100%;
   gap: 1rem; 
   grid-template-rows: auto auto auto;
   grid-template-columns: auto;
+  height: auto;
 }
 
-  /*-----------------------------------------FOR SMALL SCREENS-----------------------------------------------*/
+/*-----------------------------------------FOR SMALL SCREENS-----------------------------------------------*/
 @media screen and (min-width: 3px) {
   #grid {
     grid-template-areas: 
-      "header"
-      "main"
-      "footer";
-  }
-
-  li, a {
-    font-size: 0.7rem;
-  }
-
-  p {
-    font-family: 'Merriweather', serif;
-    font-weight: 200;
-    font-size: 0.6rem;
-    line-spacing: 0.2rem;
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: 700;
-    color: rgb(30, 77, 82);
-  }
-
-  .link, footer a {
-    letter-spacing: 0.1rem;
-  }
-
-  .other-links {
-    color: white;
-  }    
- 
-  h1 {
-    letter-spacing: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid orange;
-    font-size: 1.5rem;
-    font-weight: 900;
-  }
-
-  h2 {
-    letter-spacing: 0.4rem;
-    font-size: 1rem;
-  }
-  
-  h3 {
-    margin: 0.5rem;
-    letter-spacing: 0.3rem;
-  }
-
-  h4{
-    font-size: 0.8rem;
-    letter-spacing: 0.1rem;
-  }
-
-  h5{
-    font-size: 0.9rem;
-    margin-top: 1rem;
+    "header"
+    "main"
+    "footer";
   }
   
   ul {
@@ -91,11 +99,6 @@ body {
     display: flex;
     gap: 1rem;
     padding: 0;
-  }
-    
-  .stylized-o {
-    font-weight: 700;
-    color: rgb(30, 77, 82);
   }
   
   #gradient {
@@ -266,8 +269,6 @@ body {
     margin: 0;
   }
    
-  
-
   /*------------------ ACTIONS --------------*/
   a:active {
     color: white;
@@ -299,7 +300,6 @@ body {
     color: white;
     cursor: pointer;
   }
-
 }
 
 @media screen and (min-width: 800px) {
@@ -332,7 +332,10 @@ body {
     display: flex;
     flex-flow: column;
     gap: 1rem;
-    margin: 0 5vw;
+    margin: 0 5vw auto 5vw;
+    position: sticky;
+    top: 1rem;
+    justify-content: flex-start;
   }
 
   aside h4{
@@ -352,7 +355,6 @@ body {
     display: flex;
     flex-flow: column nowrap;
   }
-
 
 
   main {
@@ -384,7 +386,6 @@ body {
     font-size: 0.4rem;
   }
 
-
   #about-me{
     flex: 1 0 100%;
   }
@@ -394,10 +395,19 @@ body {
   }
 
   footer{
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: row;
     align-content: center;
     align-items: center;
+    height: auto;
+  }
+
+  #return_to_top{
+    padding: 0.2rem;
+    position: fixed;
+    left: 5vw;
+    top: 90vh;
+    box-shadow: 0px 8px 15px rgba(30, 77, 82, 50%);
   }
 
   /*------------------ ACTIONS --------------*/
@@ -429,7 +439,7 @@ body {
     transition: border ease-in-out 0.5s;
   }
 
- #myname:hover {
+  #myname:hover {
     color: rgb(30, 77, 82);
     cursor: pointer;
   } 
