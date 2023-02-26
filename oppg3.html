@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <title>digiFAB - Karoline</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="My web page in the course 'Digital Fabrication' at Østfold University College" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <link rel="stylesheet" href="src/style.css" title="Main CSS" >
+  </head>
+  <body>
+    <div id="grid">
+      <section id="gradient">
+        <header>
+          <a href="index.html">
+            <h1 id="header-text" >digiFAB</h1>           
+            <img src="src/img/me.png" alt="Digital drawing of myself, made by me in 'Concepts'" id="my_avatar">            
+          </a>
+        </header>
+        <nav>
+          <h2 id="myname" onclick="hideMenu()">
+            Kar
+            <span class="stylized-o">o</span>
+            line
+          </h2>
+          <ul id="nav-list">
+            <li>
+              <a href="index.html">
+                <span class="stylized-o">o</span>m
+              </a>
+            </li>
+            <li>
+              <a href="index.html">
+                <span class="stylized-o">o</span>ppgave 1
+              </a>
+            </li>  
+            <li>
+              <a href="oppg2.html">
+                <span class="stylized-o">o</span>ppgave 2
+              </a>
+            </li>
+            <li>
+              <a href="oppg3.html">
+              <span class="stylized-o">o</span>ppgave 3
+              </a>
+            </li>
+            <li>
+              <span class="stylized-o">o</span>ppgave 4
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <aside>
+        <nav>
+          <h4>Gå til</h4>
+          <ul>
+            <li><a href="#why">Hvorfor?</a></li>
+            <li><a href="#with">Utstyr</a></li>
+            <li><a href="#how">Hvordan?</a></li>
+          </ul>
+        </nav>
+        <section id="timestamp">
+          <p>Opprettet: 26.02.23</p> 
+          <p>Endret: ^</p>
+        </section>
+      </aside>
+      <main id="projects">
+        <article id="projectarticle" id="oppg2">
+          <h3><span class="stylized-o">O</span>ppgave 3</h3>
+          <h4>Elektr<span class="stylized-o">o</span>nikk med Arduin<span class="stylized-o">o</span> Un<span class="stylized-o">o </span>: P<span class="stylized-o">o</span>m<span class="stylized-o">o</span>d<span class="stylized-o">o</span>r<span class="stylized-o">o</span></h4>
+            <p class="preamble">
+              Benytter mikrokontrolleren Arduino Uno for å lære mer om elektronikk og å lage noe eget.
+            </p>
+          <h5 id="why">Hvorfor?</h5>
+            <p>
+              Ønsket å lage en pomodoro for å bli minnet på å ta pauser i jobbing og benytte en enhet som ikke er så distraherende til å nå dette formålet. Det skal være mulig å trykke på knapper for å velge ut en egnet arbeids- og pausetid. Deretter vil det foregå en nedtelling på skjermen. Lys skal vises fram til pausetid. Noe som hadde vært morsomt å få til var å sette på en sensor slik at man må gå bort til den for å skru den av ved å riste den eller liknende.
+            </p>
+
+          <img class="" src="" width="500px" alt="">
+          <h5 id="with">Utstyr</h5>
+            <p>
+              <ul class="article-list">
+                <li>Arduino Uno</li>
+                <li>Breadboard</li>
+                <li>LCD-skjerm [16x2]</li>
+                <li>To taktile knapper</li>
+                <li>2 * 10kΩ-resistor</li>
+                <li>2 * 220Ω-resistor</li>
+                <li>LED (gul)</li>
+              </ul>
+            </p>
+          <h5 id="how">Hvordan</h5>
+            <p>
+              Koblet sammen elementene og prøvde meg fram i Arduino IDE for å få noe som funket.
+            </p>
+          <section id="resources">
+          <h5>Ressurser</h5>
+          <a onclick="toggleContent()">
+            Vis koden &#x2195
+          </a>
+          <code id="toggle-code">
+            Gå til Github foreløpig ...
+          </code>         
+            <a class="link" href="">Klikk her å se .ino-filen på Github</a>
+          </section>
+        </article>
+      </main>
+      <footer>
+        <p>digiFAB - Karoline </p>
+        <ul id="other-links">
+          <li>
+            <a href="https://github.com/karoooooo">
+            Github
+            </a>
+          </li>
+        </ul>
+        <a class="link" id="return_to_top" href="#gradient">
+          Return to top
+        </a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
