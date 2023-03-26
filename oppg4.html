@@ -89,26 +89,31 @@
               <img class="project_img" src="src/img/pcb_deler.png" width="500px" alt="">
           <h5 id="how">Hvordan?</h5>
             <p>
-              Fra før hadde jeg lastet ned "libraries", så jeg hadde Adafruit og Sparkfun tilgjengelig å jobbe med, i tillegg til mye annet.
+              Fra før hadde jeg lastet ned "libraries", så jeg hadde AdaFruit og Sparkfun tilgjengelig å jobbe med, i tillegg til mye annet.
               Prosessen med å bli kjent med programmet er litt tung i starten, og jeg klarte å få en diskrepans mellom schema og board fordi ikke begge var åpne samtidig. Lærte at jeg kunne lagre alle elementene i schemaet som design-block, som gjorde at jeg kunne opprette en ny fil og putte alt inn samtidig. 
             </p>
             <p>
-              Jeg valgte å bruke strøm fra USB-tilkobling. 
+              Leste i manualen for den spesifikke ESP32 jeg har tilgjengelig,"Adafruit HUZZAH32 – ESP32 Feather Board" og jeg valgte å bruke strøm fra USB-tilkobling. Passet på å få det riktige koblet til 5V-strømkilden og det andre koblet til ground (GND).
             </p>
             <p>
               Jeg fikk hjelp fra Eagle ved å bruke ERC, som sa hva som var "Error" og "Warning". Denne har ingen errors.
               Slik så det ut til slutt etter alle elementene ble satt sammen. 
             </p>
             <img class="project_img" src="src/img/pcb_schema.png" width="500px" alt="">
+            <p>
+              Åpnet "board":
+            </p>
+            <img class="project_img" src="src/img/pcb_board_before.png" width="500px" alt="">
+            <p>
+              Slik så det ut etter jeg hadde flyttet rundt på elementene og brukt autorouter:
+            </p>
+            <img class="project_img" src="src/img/pcb_board_after.png" width="500px" alt="">
+            <p>
+              Ser at det fortsatt er en del airwires. Jeg rakk dessverre ikke ordne opp i det.
+            </p>
           <section id="resources">
-          <h5>Ressurser</h5>
-          <a onclick="toggleContent()">
-            Vis koden &#x2195
-          </a>
-          <code id="toggle-code">
-            Gå til Github foreløpig ...
-          </code>         
-            <a class="link" href="https://github.com/karoooooo/digifab/blob/main/src/">Klikk her å se filene på Github</a>
+          <h5>Ressurser</h5>      
+            <a class="link" href="https://github.com/karoooooo/digifab/blob/main/src/pcb">Klikk her å se filene på Github</a>
           </section>
         </article>
       </main>
