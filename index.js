@@ -7,7 +7,7 @@ function hideMenu (){
  }
 }
 
-function toggleContent (){
+/* function toggleContent (){
   const codeBlock = document.getElementById("toggle-code");
   if(codeBlock.style.display === "flex"){
     codeBlock.style.display = "none";
@@ -15,3 +15,4 @@ function toggleContent (){
     codeBlock.style.display = "flex";
    }
 }
+ */
