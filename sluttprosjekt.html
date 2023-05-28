@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <title>digiFAB - Karoline</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="My web page in the course 'Digital Fabrication' at Østfold University College"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="src/style.css" title="Main CSS" />
+  </head>
+  <body>
+    <div id="grid">
+      <section id="gradient">
+        <header>
+          <a href="index.html">
+            <h1 id="header-text">digiFAB</h1>
+            <img
+              src="src/img/me.png"
+              alt="Digital drawing of myself, made by me in 'Concepts'"
+              id="my_avatar"
+            />
+          </a>
+        </header>
+        <nav>
+          <h2 id="myname" onclick="hideMenu()">
+            Kar
+            <span class="stylized-o">o</span>
+            line
+          </h2>
+          <ul id="nav-list">
+            <li>
+              <a href="index.html"> <span class="stylized-o">o</span>m </a>
+            </li>
+            <li>
+              <a href="index.html">
+                <span class="stylized-o">o</span>ppgave 1
+              </a>
+            </li>
+            <li>
+              <a href="oppg2.html">
+                <span class="stylized-o">o</span>ppgave 2
+              </a>
+            </li>
+            <li>
+              <a href="oppg3.html">
+                <span class="stylized-o">o</span>ppgave 3
+              </a>
+            </li>
+            <li>
+              <a href="oppg4.html">
+                <span class="stylized-o">o</span>ppgave 4
+              </a>
+            </li>
+            <li>
+              <a href="sluttprosjekt.html">
+                sluttpr<span class="stylized-o">o</span>sjekt
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <aside>
+        <nav>
+          <h4>Gå til</h4>
+          <ul>
+            <li><a href="#why">Hvorfor?</a></li>
+            <li><a href="#how">Hvordan?</a></li>
+            <li><a href="#electro">Elektronikk</a></li>
+            <li><a href="#laser">Laserkutting og -gravering</a></li>
+            <li><a href="#3d">3D-modellering og -printing</a></li>
+          </ul>
+        </nav>
+        <section id="timestamp">
+          <p>Opprettet: 26.05.23</p>
+          <p>Endret: 29.05.23</p>
+        </section>
+      </aside>
+      <main id="projects">
+        <article id="projectarticle">
+          <h3>Sluttprosjekt</h3>
+
+          <section id="intro">
+            <h4>Pendlerhjelp</h4>
+            <p class="preamble">
+              I siste oppgave i DigiFab skal vi kunne ta ibruk elektronikk og to
+              digitale fabrikasjonsmetoder for å lage noe som kan bidra positivt
+              med tanke på bærekraftig utvikling eller klimautfordringer og
+              global oppvarming. Dette har blitt møtt med konseptet Pendlerhjelp
+              som skal oppfordre brukere til å reise mer miljøvennlig og dermed
+              redusere utslipp fra transportsektoren.
+            </p>
+          </section>
+            <img class="project_img" src="" width="500px" alt="" />
+          <section>
+            <h4 id="why">Hvorfor?</h4>
+            <p>
+              Transportsektoren står for litt info om prosjektet<a
+                class="otherlinks"
+                href="#md"
+                ><sup>[0]</sup></a
+              >
+            </p>
+            <h5>Konsept</h5>
+            <p>
+              Pendlerhjelp skal vise deg den beste reisemåten og belønne deg for
+              å velge mijøvennlige framkomstmidler (dersom forholdene ligger til
+              rette for å velge bedre...)
+            </p>
+            <p>Funksjonalitet:</p>
+            <ul class="article-list">
+              <li>
+                Brukeren velger tidspunkt og sted for pendling og hvilke
+                transportmetoder som er aktuelle.
+              </li>
+              <li>
+                Enheten slås på i 2 t rundt brukerens valgte avreisetidspunkt og
+                er ellers i dvale.
+              </li>
+              <li>
+                Data hentes inn fra Yr.no og disse parameterne blir signalisert
+                med fargekoder:
+                <ul class="nested-list">
+                  <li>temperatur</li>
+                  <li>nedbør</li>
+                  <li>vind</li>
+                  <li>luftkvalitet</li>
+                </ul>
+              </li>
+              <li>
+                Skjermen vil si noe om hvilken transportmetode som er mest
+                fordelaktig på det tidspunktet man ser på skjermen basert på
+                dataene og hvor mye tid som gjenstår før brukeren skal ha nådd
+                reisemålet. Disse kan konfigureres:
+                <ul class="nested-list">
+                  <li>buss</li>
+                  <li>sykkel</li>
+                  <li>gå</li>
+                  <li>kjøre bil</li>
+                </ul>
+              </li>
+              <li>
+                Brukeren trykker på en av to knapper i det de forlater enheten
+                og tar et valg om de vil velge det beste for miljøet og helsen.
+              </li>
+              <li>Belønning i form av poeng...</li>
+            </ul>
+
+            <p>Utvidelsesidéer:</p>
+            <ul class="article-list">
+              <li>
+                Integrere data fra enheten til en database (Dataene kan samles i
+                en database og koble opp til internett eller bruke
+                Bluetooth-funksjonalitet. Konfigurasjon... )
+              </li>
+              <li>
+                Hensyn til helsefaktorer som er med på å avgjøre resultatet for
+                anbefalingen. Hvis man har astma eller liknende vil det ikke gi
+                like store utslag om man velger å ikke sykle eller gå. (I
+                tillegg kan man gjøre valg som er bedre for egen helse. Dersom
+                du har astma eller migrene? Du kan velge at på dager hvor det er
+                ekstremt dårlig luftkvalitet får du ikke særlig dårlig utslag
+                selv om du ikke f.eks. sykler.)
+              </li>
+              <li>
+                Inkludere sensorer for lokale verdier (Overordnet var det også
+                tenkt at sensorer kunne blitt inkludert, men det var et spørsmål
+                om arbeidsmengde og hvorvidt det var relevant for reisemålet.)
+              </li>
+              <li>Solcelledrevet</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4 id="how">Hvordan?</h4>
+            <p>
+              Først bestemte jeg meg for hvilken mikrokontroller jeg skulle
+              bruke. Det sto mellom Arduino Uno, ESP32 og Raspberry Pi, og
+              valget gikk på ESP32 fordi den har flere I/O-pins (Input/Output)
+              enn Arduinoen, er mer kompakt og krever mindre strøm enn begge
+              motstanderne. I tillegg kan man koble den opp til WiFi og
+              Bluetooth.
+            </p>
+            <p>
+              Jeg lagde en skisse av produktet med tablet, og bestemte meg for
+              de to digitale fabrikasjonsmetodene:
+            </p>
+            <ul class="article-list">
+              <li>3D-printing</li>
+              <li>laserkutting</li>
+            </ul>
+            <img
+              class="project_img"
+              src="src/img/"
+              width="500px"
+              alt="skisse"
+            />
+            <p>
+              Utviklingsprosessen krevde mye iterasjon, så det var ikke en rett
+              vei fram til målet. For å vite hvordan en boks skal se ut, må man
+              vite hva som skal være i den...
+            </p>
+
+            <h5>1.prototype</h5>
+            <p>
+              Basert på skissen puttet jeg de elektroniske komponentene sammen
+              og designet en 3D-modell for en boks basert på grove målinger og bilder som canvas for å plassere elementer relativt til hverandre.
+            </p>
+            <p>
+              Eksporterte skissen og redigerte den som en vektorfil som kunne
+              benyttes til laserkutting og -gravering med plexiglass. Printet boksen i PLA og
+              prøvde grunnleggende kode som skulle teste LEDs og vise dette i samspill.
+            </p>
+            <img
+              class="project_img"
+              src="src/img/"
+              width="500px"
+              alt="1prototype"
+            />
+            <p>
+              Basert på første prototype ville jeg gjøre et par endringer. Først
+              og fremst ville jeg bytte ut skjermen som krevde veldig mange
+              I/O-pins, en del strøm og kun ga 16x2 tegn, som jeg synes var litt
+              for begrensende. Den var også ganske stor, så jeg ønsket å gå i en
+              mer kompakt retning med produktet.
+            </p>
+          </section>
+
+          <section>
+            <h5 id="electro">Elektronikk</h5>
+            <p>
+              Alle komponentene som er tatt i bruk i siste prototype.
+            </p>
+            <ul class="article-list">
+              <li>
+                Adafruit HUZZAH32 - ESP32 Feather
+                <a class="otherlinks" href="#esp32"><sup>[1]</sup></a>
+              </li>
+              <li>
+                Adafruit 128 x 64 OLED FeatherWing
+                <a class="otherlink" href="#oled"><sup>[2]</sup></a>
+              </li>
+              <li>FeatherWing Stacking Headers</li>
+              <li>2 * mini breadboards</li>
+              <li>2 * 10 kΩ-resistor</li>
+              <li>12 * 220 Ω-resistorer</li>
+              <li>4 RGB-LEDs</li>
+              <li>2 taktile knapper</li>
+              <li>2 * AA-batteripakke (3V-strømkilde)</li>
+              <p>I tillegg:</p>
+              <li>Kabler</li>
+              <li>Krympestrømper</li>
+              <li>Loddeutstyr</li>
+            </ul>
+            <img class="project_img" src="src/img/" width="500px" alt="komponenter" />
+            <p>
+              På grunn av valget mitt av breadboards kunne jeg ha en del ulike
+              layouts, og prøvde meg frem med ulike løsninger med 2 og 3
+              breadboards for å se hvordan jeg skulle kombinere det med batteripakken og plexiglasset. Endte opp med 2 mini breadboards og klistret dem på en 3mm plate med arkitekturpapp for å jevne ut høydeforskjeller.
+            </p>
+            <p>
+              Erstattet skjermen fra første prototype med en 128x64 OLED-skjerm. Fikk hjelp med å lodde på stacking headers så OLED-skjermen kunne bli plassert på toppen av ESP32-en, som betydelig reduserte plassbehovet. FeatherWing har også 3 mini-knapper på innsiden,som jeg tenker kunne blitt brukt til          konfigurasjon, men jeg trengte GPIOs for å kontrollere alle pinsene fra LEDs.
+            </p>
+            <p>
+              Loddet fargekodede ledninger med resistorer til hver RGB-pin, og en svart ledning på katode-pin og puttet på krympestrømper. 
+            </p>
+            <img class="project_img" src="src/img" width="500px" alt="components" />
+          </section>
+
+          <section>
+            <h5 id="3d">3D-modellering og -printing</h5>
+            <img class="project_img" src="src/img" width="500px" alt="3d stuff" />
+            <p>
+              Den andre 3D-modellen ble basert på mer nøyaktige målinger tatt med digitalt 
+              skyvelær. Den består en grunndel og et lokk. La inn skisser for komponentene og la inn parametere for målingene og prøvde å holde komponentene adskilt med gitte måleverdier.
+
+
+              LEDS - 
+              Batteri -
+
+              Brukte "Loft" for å koble sammen det nedsenkede knappefeltet med skjermfeltet. 
+            </p>
+
+            <p>
+              Resultat før breadboards ble klistret sammen med arkitekturpapp og alle LEDs er skvist på plass: 
+            </p>
+            <img class="project_img" src="src/img" width="500px" alt="box" />
+
+            <p>
+              Alt i alt ble det litt trangt til slutt, men jeg
+              valgte å bruke en Dremel for å file bort litt av sideveggene slik
+              at det ble plass til breadboards. Polerte så litt over slik at det
+              lukket seg litt mer. Siden jeg loddet og brukte krympestrømper på
+              ledningene, ble de tykkere enn jeg tenkte da jeg modellerte, siden
+              jeg bare tok hensyn til selve pinsene, så jeg filte dem bredere
+              med dremelen. Slapp å printe en ny del så sparte de ressursene. En utfordring jeg gjerne skulle ha jobbet litt mer med er lokk-design, slik at det lukker seg pent. Enda en optimalisering kunne også ha vært å se litt mer på vinkler slik at mindre support-materiale kreves for å printe det. 
+            </p>
+          </section>
+
+          <section>
+            <h5 id="laser">Laserkutting og -gravering</h5>
+            <img class="project_img" src="src/img" width="500px" alt="laser stuff" />
+            <p>
+              Fusion printer Plexiglass 3.5mm ca Gravering som blir til fargen
+              som lyser gjennom med LED
+            </p>
+          </section>
+
+          <section>
+            <h5>Kode</h5>
+            <p>
+              Prosessen med å sette opp en ESP32:
+              <ol>
+                <li>
+                  Laste ned Arduino IDE
+                </li>
+                <li>
+                  Libraries for esp32 og for skjerm, repo fra github og..
+                </li>
+                <li>
+                  Velge board
+                </li>
+                <li>
+                  Velge port 
+                </li>
+                <li>
+                  Føre over kode
+                </li>
+                <li>
+                  Teste med eksempelkode
+                </li>
+                <li>
+                  Lage egen kode basert på alle komponentene
+                </li>
+              </ol> 
+            </p>
+
+            <p>
+              Kodens funksjonalitet ligger mest i det å få vise beskjeder på
+              skjermen og ha lys som reagerer på knappetrykk. Jeg er fornøyd med
+              å ha lagd en del funksjoner slik at gjenbruk av kode går bedre. 4
+              RGB-leds trenger 12 ulike variabler, så det er likevel en del å
+              holde styr på. Jeg fikk til å koble opp enheten til WiFi, men
+              valgte å ikke ha dette med på koden til slutt. Komplisert: delays
+              - alt stopper opp
+            </p>
+          </section>
+          <section>
+            <h5>Videre</h5>
+            <p>
+              <li>Det</li>
+            </p>
+          </section>
+
+          <section>
+            <h5>Konklusjon</h5>
+            <p>
+              I kode-delen er det naturligvis et mål å kunne inkludere API fra
+              Yr.no. Dette fikk jeg ikke tid til i denne omgang, men jeg er
+              fornøyd med hvor mye jeg har lært i prosessen, og har lagt ned mye
+              arbeid i utviklingen av produktet. Det er en helomvending fra
+              tidligere oppgaver.
+            </p>
+          </section>
+
+          <section id="resources">
+            <h5>Ressurser</h5>
+            <a
+              class="link"
+              href="https://github.com/karoooooo/digifab/blob/main/src/"
+              >Klikk her å se filene på Github</a
+            >
+            <a
+              class="other-link"
+              id="esp32"
+              href="https://miljostatus.miljodirektoratet.no/tema/klima/norske-utslipp-av-klimagasser/klimagassutslipp-fra-transport/"
+              >0: Miljødirektoratet om klimagassutslipp fra transportsektoren</a
+            >
+            <a
+              class="other-link"
+              id="esp32"
+              href="https://learn.adafruit.com/adafruit-huzzah32-esp32-feather"
+              >1: Adafruit-dokumentasjon om HUZZAH32 ESP32 Feather</a
+            >
+            <a
+              class="other-link"
+              id="oled"
+              href="https://learn.adafruit.com/adafruit-128x64-oled-featherwing"
+              >2: Adafruit-dokumentasjon om 128x64 OLED FeatherWing</a
+            >
+          </section>
+        </article>
+      </main>
+      <footer>
+        <p>digiFAB - Karoline</p>
+        <ul id="other-links">
+          <li>
+            <a href="https://github.com/karoooooo"> Github </a>
+          </li>
+        </ul>
+        <a class="link" id="return_to_top" href="#gradient"> Return to top </a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

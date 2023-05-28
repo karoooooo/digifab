@@ -17,13 +17,13 @@ body {
 }
 
 li, a {
-  font-size: 0.7rem;
+  font-size: 0.4rem;
 }
 
 p {
   font-family: 'Merriweather', serif;
   font-weight: 200;
-  font-size: 0.6rem;
+  font-size: 0.4rem;
   line-spacing: 0.2rem;
 }
 
@@ -66,7 +66,7 @@ h4{
 }
 
 h5{
-  font-size: 0.9rem;
+  font-size: 0.66rem;
   margin-top: 1rem;
 }
 
@@ -107,7 +107,7 @@ h5{
       /*SOURCE: I made it in Photoshop*/
     background-position-x: center;
     background-position-y: center;
-    background-color: rgb(243, 172, 40);
+    background-color: orange;
     object-fit: contain;
     padding: 5%;
     max-width: 100%;
@@ -187,14 +187,27 @@ h5{
     gap: 5%;
   }
 
+  #projectarticle section {
+    padding: 0 5%;
+  }
+
+  #projectarticle #intro {
+    border-radius: 5px;
+    border: 2px dotted orange;
+    padding: 1%;
+  }
+
+  #projectarticle #resources {
+    padding: 5%;
+  }
+
   #projectarticle h3{
     margin-bottom: 1rem;
   }
 
-  #projectarticle h4, #projectarticle .preamble{
+  #intro{
     margin:  0.5rem;
   }
-
 
   article p {
     margin: 0.5rem 0;
@@ -213,7 +226,7 @@ h5{
   }
   
   #about-me {
-    border: 2px solid rgb(243, 172, 40);
+    border: 2px dotted orange;
   }
   
   .link {
@@ -258,12 +271,16 @@ h5{
     flex-direction: column;
     font-family: 'Merriweather', serif;
     padding-left: 1rem;
+    gap: 0.2rem;
   }
   
   .article-list li{
-    font-size: 0.6rem;
     font-weight: 200;
     list-style: initial;
+  }
+
+  .nested-list {
+    margin-left: 1rem;
   }
 
   #resources {
@@ -280,7 +297,6 @@ h5{
     margin: 0;
   }
 
-   
   /*------------------ ACTIONS --------------*/
   a:active {
     color: white;
@@ -291,7 +307,7 @@ h5{
     text-decoration: underline;
   }
 
-  .otherlinks:active {
+  .other-links:active {
     color: rgb(30, 77, 82);
   }
   
@@ -437,7 +453,7 @@ h5{
     background-color: orange;
   }
   
-  .otherlinks:hover {
+  .other-links:hover {
     color: rgb(30, 77, 82);
   }
   
@@ -448,7 +464,7 @@ h5{
   #my_avatar:hover {
     border: 0.5rem solid white; 
     padding: 0;
-    transition: border ease-in-out 0.5s;
+    transition: border 1s ease-out;
   }
 
   #myname:hover {

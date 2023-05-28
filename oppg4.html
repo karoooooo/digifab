@@ -2,18 +2,25 @@
 <html lang="nb">
   <head>
     <title>digiFAB - Karoline</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="My web page in the course 'Digital Fabrication' at Østfold University College" >
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
-    <link rel="stylesheet" href="src/style.css" title="Main CSS" >
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="My web page in the course 'Digital Fabrication' at Østfold University College"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="src/style.css" title="Main CSS" />
   </head>
   <body>
     <div id="grid">
       <section id="gradient">
         <header>
           <a href="index.html">
-            <h1 id="header-text" >digiFAB</h1>           
-            <img src="src/img/me.png" alt="Digital drawing of myself, made by me in 'Concepts'" id="my_avatar">            
+            <h1 id="header-text">digiFAB</h1>
+            <img
+              src="src/img/me.png"
+              alt="Digital drawing of myself, made by me in 'Concepts'"
+              id="my_avatar"
+            />
           </a>
         </header>
         <nav>
@@ -24,15 +31,13 @@
           </h2>
           <ul id="nav-list">
             <li>
-              <a href="index.html">
-                <span class="stylized-o">o</span>m
-              </a>
+              <a href="index.html"> <span class="stylized-o">o</span>m </a>
             </li>
             <li>
               <a href="index.html">
                 <span class="stylized-o">o</span>ppgave 1
               </a>
-            </li>  
+            </li>
             <li>
               <a href="oppg2.html">
                 <span class="stylized-o">o</span>ppgave 2
@@ -40,12 +45,17 @@
             </li>
             <li>
               <a href="oppg3.html">
-              <span class="stylized-o">o</span>ppgave 3
+                <span class="stylized-o">o</span>ppgave 3
               </a>
             </li>
             <li>
               <a href="oppg4.html">
-              <span class="stylized-o">o</span>ppgave 4
+                <span class="stylized-o">o</span>ppgave 4
+              </a>
+            </li>
+            <li>
+              <a href="sluttprosjekt.html">
+                sluttpr<span class="stylized-o">o</span>sjekt
               </a>
             </li>
           </ul>
@@ -61,76 +71,131 @@
           </ul>
         </nav>
         <section id="timestamp">
-          <p>Opprettet: 26.03.23</p> 
-          <p>Endret: 21.04.23</p>
+          <p>Opprettet: 26.03.23</p>
+          <p>Endret: 29.05.23</p>
         </section>
       </aside>
       <main id="projects">
-        <article id="projectarticle" id="oppg2">
+        <article id="projectarticle">
           <h3><span class="stylized-o">O</span>ppgave 4</h3>
-          <h4>PCB med ESP32: P<span class="stylized-o">o</span>m<span class="stylized-o">o</span>d<span class="stylized-o">o</span>r<span class="stylized-o">o</span></h4>
+          <section id="intro">
+            <h4>
+              PCB med ESP32: P<span class="stylized-o">o</span>m<span
+                class="stylized-o"
+                >o</span
+              >d<span class="stylized-o">o</span>r<span class="stylized-o"
+                >o</span
+              >
+            </h4>
             <p class="preamble">
-              Bruker Eagle for å lage schema og designe en PCB (Printed Circuit Board).
+              Bruker Eagle for å lage schema og designe en PCB (Printed Circuit
+              Board).
             </p>
-          <h5 id="why">Hvorfor?</h5>
-          <img class="project_img" src="src/img/pcb_detail.png" width="500px" alt="">
+          </section>
+          <section>
+            <h5 id="why">Hvorfor?</h5>
+            <img
+              class="project_img"
+              src="src/img/pcb_detail.png"
+              width="500px"
+              alt=""
+            />
             <p>
-              Fordeler med å lage en egen PCB er at man kan tilpasse den til prosjektets behov og minimere størrelse og kabler. Jeg tenkte å prøve meg på Pomodoro-prosjektet fra oppgave 3, men bytte ut Arduino Uno med ESP32. Her er hvordan det gikk:
+              Fordeler med å lage en egen PCB er at man kan tilpasse den til
+              prosjektets behov og minimere størrelse og kabler. Jeg tenkte å
+              prøve meg på Pomodoro-prosjektet fra oppgave 3, men bytte ut
+              Arduino Uno med ESP32. Her er hvordan det gikk:
             </p>
+          </section>
 
-          <h5 id="with">Utstyr</h5>
-              <ul class="article-list">
-                <li>ESP32</li>
-                <li>LCD-skjerm [16x2]</li>
-                <li>3 knapper</li>
-                <li>3 * 10kΩ-resistor</li>
-                <li>2 * 220Ω-resistor</li>
-                <li>LED</li>
-              </ul>
-              <img class="project_img" src="src/img/pcb_deler.png" width="500px" alt="">
-          <h5 id="how">Hvordan?</h5>
+          <section>
+            <h5 id="with">Utstyr</h5>
+            <ul class="article-list">
+              <li>ESP32</li>
+              <li>LCD-skjerm [16x2]</li>
+              <li>3 knapper</li>
+              <li>3 * 10kΩ-resistor</li>
+              <li>2 * 220Ω-resistor</li>
+              <li>LED</li>
+            </ul>
+            <img
+              class="project_img"
+              src="src/img/pcb_deler.png"
+              width="500px"
+              alt=""
+            />
+          </section>
+
+          <section>
+            <h5 id="how">Hvordan?</h5>
             <p>
-              Fra før hadde jeg lastet ned "libraries", så jeg hadde AdaFruit og Sparkfun tilgjengelig å jobbe med, i tillegg til mye annet.
-              Prosessen med å bli kjent med programmet er litt tung i starten, og jeg klarte å få en diskrepans mellom schema og board fordi ikke begge var åpne samtidig. Lærte at jeg kunne lagre alle elementene i schemaet som design-block, som gjorde at jeg kunne opprette en ny fil og putte alt inn samtidig. 
+              Fra før hadde jeg lastet ned "libraries", så jeg hadde AdaFruit og
+              Sparkfun tilgjengelig å jobbe med, i tillegg til mye annet.
+              Prosessen med å bli kjent med programmet er litt tung i starten,
+              og jeg klarte å få en diskrepans mellom schema og board fordi ikke
+              begge var åpne samtidig. Lærte at jeg kunne lagre alle elementene
+              i schemaet som design-block, som gjorde at jeg kunne opprette en
+              ny fil og putte alt inn samtidig.
             </p>
             <p>
-              Leste i manualen for den spesifikke ESP32 jeg har tilgjengelig,"Adafruit HUZZAH32 – ESP32 Feather Board" og jeg valgte å bruke strøm fra USB-tilkobling. Passet på å få det riktige koblet til 5V-strømkilden og det andre koblet til ground (GND).
+              Leste i manualen for den spesifikke ESP32 jeg har
+              tilgjengelig,"Adafruit HUZZAH32 – ESP32 Feather Board" og jeg
+              valgte å bruke strøm fra USB-tilkobling. Passet på å få det
+              riktige koblet til 5V-strømkilden og det andre koblet til ground
+              (GND).
             </p>
             <p>
-              Jeg fikk hjelp fra Eagle ved å bruke ERC, som sa hva som var "Error" og "Warning". Denne har ingen errors.
-              Slik så det ut til slutt etter alle elementene ble satt sammen. 
+              Jeg fikk hjelp fra Eagle ved å bruke ERC, som sa hva som var
+              "Error" og "Warning". Denne har ingen errors. Slik så det ut til
+              slutt etter alle elementene ble satt sammen.
             </p>
-            <img class="project_img" src="src/img/pcb_schema.png" width="500px" alt="">
+            <img
+              class="project_img"
+              src="src/img/pcb_schema.png"
+              width="500px"
+              alt=""
+            />
+            <p>Åpnet "board":</p>
+            <img
+              class="project_img"
+              src="src/img/pcb_board_before.png"
+              width="500px"
+              alt=""
+            />
             <p>
-              Åpnet "board":
+              Slik så det ut etter jeg hadde flyttet rundt på elementene og
+              brukt autorouter:
             </p>
-            <img class="project_img" src="src/img/pcb_board_before.png" width="500px" alt="">
+            <img
+              class="project_img"
+              src="src/img/pcb_board_after.png"
+              width="500px"
+              alt=""
+            />
             <p>
-              Slik så det ut etter jeg hadde flyttet rundt på elementene og brukt autorouter:
+              Jeg autoroutet top- og bottom-layer og deretter genererte jeg
+              CAD-filene.
             </p>
-            <img class="project_img" src="src/img/pcb_board_after.png" width="500px" alt="">
-            <p>
-              Ser at det fortsatt er en del airwires. Jeg rakk dessverre ikke ordne opp i det. Jeg autoroutet top- og bottom-layer.
-              Deretter genererte jeg CAD-filene.
-            </p>
+          </section>
+
           <section id="resources">
-          <h5>Ressurser</h5>      
-            <a class="link" href="https://github.com/karoooooo/digifab/blob/main/src/pcb">Klikk her å se filene på Github</a>
+            <h5>Ressurser</h5>
+            <a
+              class="link"
+              href="https://github.com/karoooooo/digifab/blob/main/src/pcb"
+              >Klikk her å se filene på Github</a
+            >
           </section>
         </article>
       </main>
       <footer>
-        <p>digiFAB - Karoline </p>
+        <p>digiFAB - Karoline</p>
         <ul id="other-links">
           <li>
-            <a href="https://github.com/karoooooo">
-            Github
-            </a>
+            <a href="https://github.com/karoooooo"> Github </a>
           </li>
         </ul>
-        <a class="link" id="return_to_top" href="#gradient">
-          Return to top
-        </a>
+        <a class="link" id="return_to_top" href="#gradient"> Return to top </a>
       </footer>
     </div>
     <script src="index.js"></script>

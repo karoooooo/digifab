@@ -1,9 +1,14 @@
-// include the library code:
-#include <LiquidCrystal.h>
+#include <LiquidCrystal_I2C.h>
 #include <math.h>
+#include <Wire.h>
+
+int lcdColumns = 16;
+int lcdRows = 2;
+
+LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
 
 // initialize the library with the numbers of the interface pins
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
 const int LEDPin = 10;
 const int pinA = 6; //ButtonA (PinNumber)
 const int pinB = 7; 
@@ -15,7 +20,10 @@ int pvA = 0;
 int pvB = 0;
 
 void setup() {
-  Serial.begin(9600);
+  Wire.begin();
+  lcd.init();
+  lcd.backlight();
+  Serial.begin(115200);
     // set up the number of columns and rows on the LCD
   lcd.begin(16, 2);
   // setup of LED
