@@ -100,11 +100,7 @@
           <section>
             <h4 id="why">Hvorfor?</h4>
             <p>
-              Transportsektoren står for litt info om prosjektet<a
-                class="otherlinks"
-                href="#md"
-                ><sup>[0]</sup></a
-              >
+              Transportsektoren står for litt info om prosjektet
             </p>
             <h5>Konsept</h5>
             <p>
@@ -196,7 +192,7 @@
             </ul>
             <img
               class="project_img"
-              src="src/img/sp/"
+              src="src/img/sp/digifab_sp_skisse.png"
               width="500px"
               alt="skisse"
             />
@@ -213,18 +209,17 @@
             </p>
             <img
             class="project_img"
-            src="src/img/sp/"
+            src="src/img/sp/sp_1prototype_komponenter.jpg"
             width="500px"
             alt="1prototype"
           />
             <p>
               Eksporterte skissen og redigerte den som en vektorfil som kunne
-              benyttes til laserkutting og -gravering med plexiglass. Printet boksen i PLA og
-              prøvde grunnleggende kode som skulle teste LEDs og vise dette i samspill.
+              benyttes til laserkutting og -gravering med plexiglass. Printet boksen i PLA og prøvde grunnleggende kode som skulle teste LEDs og vise dette i samspill.
             </p>
             <img
               class="project_img"
-              src="src/img/sp/"
+              src="src/img/sp/sp_1prototype.jpg"
               width="500px"
               alt="1prototype"
             />
@@ -267,10 +262,10 @@
             <p>
               På grunn av valget mitt av breadboards kunne jeg ha en del ulike
               layouts, og prøvde meg frem med ulike løsninger med 2 og 3
-              breadboards for å se hvordan jeg skulle kombinere det med batteripakken og plexiglasset. Endte opp med 2 mini breadboards og klistret dem på en 3mm plate med arkitekturpapp for å jevne ut høydeforskjeller.
+              breadboards for å se hvordan jeg skulle kombinere det med batteripakken og plexiglasset. Endte opp med 2 mini breadboards og klistret dem på en 3mm plate med arkitekturpapp for å jevne ut høydeforskjeller. 
             </p>
             <p>
-              Erstattet skjermen fra første prototype med en 128x64 OLED-skjerm. Fikk hjelp med å lodde på stacking headers så OLED-skjermen kunne bli plassert på toppen av ESP32-en, som betydelig reduserte plassbehovet. FeatherWing har også 3 mini-knapper på innsiden, som jeg tenker kunne blitt brukt til          konfigurasjon, men jeg trengte GPIOs for å kontrollere alle pinsene fra LEDs.
+              Erstattet skjermen fra første prototype med en 128x64 OLED-skjerm. Fikk hjelp med å lodde på stacking headers så OLED-skjermen kunne bli plassert på toppen av ESP32-en, som betydelig reduserte plassbehovet. FeatherWing har også 3 mini-knapper på innsiden, som jeg tenker kunne blitt brukt til konfigurasjon, men jeg trengte GPIOs for å kontrollere alle pinsene fra LEDs.
             </p>
             <p>
               Loddet fargekodede ledninger med resistorer til hver RGB-pin, og en svart ledning på katode-pin og puttet på krympestrømper. 
@@ -280,14 +275,19 @@
 
           <section>
             <h5 id="laser">Laserkutting og -gravering</h5>
-            <img class="project_img" src="src/img" width="500px" alt="laser stuff" />
+            <img class="project_img" src="src/img/sp/sp_laserkutt.png" width="200px" alt="laser sketch" />
             <p>
               Lastet opp skissen som vektorfil og redigerte den videre i Adobe Illustrator.
               For å bruke printeren må artboardet være 1010mm x 710mm og alle linjer som skal kuttes være på 0,025 mm, mens det som skal graveres kan ha en annen tykkelse.
               Materialet jeg brukte var plexiglass på ca 3.5mm.
             </p>
+            <img class="project_img" src="src/img/sp/" width="500px" alt="laser stuff" />
             <p>
               Oppdaget på første print at jeg fikk et par hull, fordi ikke alle strekene var i riktig tykkelse, og basert på designet av 3D-modellen så jeg at jeg hadde gjort noen feil med beregningen av avstandene mellom LEDS, noe jeg ordnet i andre omgang. Fikk også lastet opp 3D-filen som .dxf-fil til Illustrator for å sammenlikne.
+            </p>
+            <img class="project_img" src="src/img/sp/" width="500px" alt="laser stuff" />
+            <p>
+              PDF-filen som ble brukt til print ligger på github.
             </p>
           </section>
 
@@ -296,8 +296,7 @@
             <img class="project_img" src="src/img" width="500px" alt="3d stuff" />
             <p>
               Den andre 3D-modellen ble basert på mer nøyaktige målinger tatt med digitalt 
-              skyvelær. Den består en grunndel og et lokk. La inn skisser for komponentene og la inn parametere for målingene og prøvde å holde komponentene adskilt med gitte måleverdier.
-              Kunne laste inn SVG av det jeg skulle laserkutte slik at jeg kunne finne plasseringen av LEDS og kunne designe toppen av boksen lettere.
+              skyvelær. Den består en grunndel og et lokk. La inn skisser for komponentene og la inn parametere for målingene og prøvde å holde komponentene adskilt med gitte måleverdier. Lastet opp en SVG av det jeg skulle laserkutte slik at jeg kunne finne plasseringen av LEDS og kunne designe toppen av boksen lettere.
               Brukte "Loft" for å koble sammen det nedsenkede knappefeltet med skjermfeltet.
             </p>
 
@@ -326,7 +325,7 @@
                   Laste ned Arduino IDE
                 </li>
                 <li>
-                  Libraries for esp32 og for skjerm, repo fra github og..
+                  Libraries for ESP32 og for skjerm, repo fra Github
                 </li>
                 <li>
                   Velge board
@@ -335,28 +334,23 @@
                   Velge port 
                 </li>
                 <li>
-                  Føre over kode
-                </li>
-                <li>
-                  Teste med eksempelkode
-                </li>
-                <li>
-                  Registrere alle komponentene og programmere
+                  Registrere alle komponentene, programmere og teste
                 </li>
               </ol> 
             </p>
 
             <p>
-              Kodens funksjonalitet ligger mest i det å få vise beskjeder på
+              Kodens funksjonalitet ble avslutningsvis å få vist beskjeder på
               skjermen og ha lys som reagerer på knappetrykk. Jeg er fornøyd med
-              å ha lagd en del funksjoner slik at gjenbruk av kode går bedre. 4
-              RGB-leds trenger 12 ulike variabler, så det er men del å
+              å ha lagd en del funksjoner slik at gjenbruk av kode går bedre. 4 RGB-leds trenger 12 ulike variabler, så det er men del å
               holde styr på. Jeg fikk til å koble opp enheten til WiFi, men
-              valgte å ikke ha dette med på koden til slutt. Ønsket å ha med 
+              valgte å ikke ha dette med på koden til slutt. På grunn av loddingen var det skjørt å håndtere, som resulterte i at den øverste LED ikke kan nå B (blå) og den nederste ikke kan nå G (grønn).
             </p>
-
             <p>
-              På grunn av loddingen var det skjørt å håndtere, som resulterte i at T ikke kan nå B og A ikke kan nå G. 
+              Det var en utfordring å få skjermen til å holde seg stabil og samtidig oppdatere verdier uten at delays kommer i veien. Til slutt fikk jeg vist startskjerm, velkomstskjerm og en klokke som endrer seg hvert minutt, dagens transportalternativ og i tillegg en negativ beskjed dersom man klikker på den røde knappen.
+            </p>
+            <p>
+              Koden ligger på Github.
             </p>
           </section>
 
@@ -373,8 +367,7 @@
               I kode-delen er det naturligvis et mål å kunne inkludere API fra
               Yr.no. Dette fikk jeg ikke tid til i denne omgang, men jeg er
               fornøyd med hvor mye jeg har lært i prosessen, og har lagt ned mye
-              arbeid i utviklingen av produktet. Det er en helomvending fra
-              tidligere oppgaver.
+              arbeid i utviklingen av produktet, men kanskje mest med generelt layout, og mindre med finpuss og funksjonalitet. 
             </p>
           </section>
 
@@ -382,14 +375,9 @@
             <h5>Ressurser</h5>
             <a
               class="link"
-              href="https://github.com/karoooooo/digifab/blob/main/src/"
+              id="github-src"
+              href="https://github.com/karoooooo/digifab/blob/main/src/sp"
               >Klikk her å se filene på Github</a
-            >
-            <a
-              class="other-link"
-              id="esp32"
-              href="https://miljostatus.miljodirektoratet.no/tema/klima/norske-utslipp-av-klimagasser/klimagassutslipp-fra-transport/"
-              >0: Miljødirektoratet om klimagassutslipp fra transportsektoren</a
             >
             <a
               class="other-link"
