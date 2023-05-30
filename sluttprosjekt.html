@@ -71,9 +71,8 @@
             <li><a href="#laser">Laserkutting og -gravering</a></li>
             <li><a href="#3d">3D-modellering og -printing</a></li>
             <li><a href="#code">Kode</a></li>
-            <li><a href="#further">Videre</a></li>
+            <li><a href="#last-words">Sluttord</a></li>
             <li><a href="#resources">Ressurser</a></li>
-
           </ul>
         </nav>
         <section id="timestamp">
@@ -96,7 +95,7 @@
               redusere utslipp fra transportsektoren.
             </p>
           </section>
-            <img class="project_img" src="" width="500px" alt="" />
+            <img class="project_img" src="" width="500px" alt="gif av prosjektet" />
           <section>
             <h4 id="why">Hvorfor?</h4>
             <p>
@@ -144,15 +143,13 @@
                 Brukeren trykker på en av to knapper i det de forlater enheten
                 og tar et valg om de vil velge det beste for miljøet og helsen.
               </li>
-              <li>Belønning i form av poeng...</li>
+              <li>Belønning i form av poeng</li>
             </ul>
 
             <p>Utvidelsesidéer:</p>
             <ul class="article-list">
               <li>
-                Integrere data fra enheten til en database (Dataene kan samles i
-                en database og koble opp til internett eller bruke
-                Bluetooth-funksjonalitet. Konfigurasjon... )
+                Sende data fra enheten til en database via WiFi
               </li>
               <li>
                 Hensyn til helsefaktorer som er med på å avgjøre resultatet for
@@ -168,7 +165,7 @@
                 tenkt at sensorer kunne blitt inkludert, men det var et spørsmål
                 om arbeidsmengde og hvorvidt det var relevant for reisemålet.)
               </li>
-              <li>Solcelledrevet</li>
+              <li>Enheten kan være solcelledrevet</li>
             </ul>
           </section>
 
@@ -258,61 +255,71 @@
               <li>Krympestrømper</li>
               <li>Loddeutstyr</li>
             </ul>
-            <img class="project_img" src="src/img/sp/" width="500px" alt="komponenter" />
+            <img class="project_img" src="src/img/sp/komponenter.jpg" width="500px" alt="components" />
             <p>
               På grunn av valget mitt av breadboards kunne jeg ha en del ulike
               layouts, og prøvde meg frem med ulike løsninger med 2 og 3
               breadboards for å se hvordan jeg skulle kombinere det med batteripakken og plexiglasset. Endte opp med 2 mini breadboards og klistret dem på en 3mm plate med arkitekturpapp for å jevne ut høydeforskjeller. 
             </p>
+            <img class="project_img" src="src/img/sp/esp_uten_skjerm.jpg" width="500px" alt="components" />
             <p>
               Erstattet skjermen fra første prototype med en 128x64 OLED-skjerm. Fikk hjelp med å lodde på stacking headers så OLED-skjermen kunne bli plassert på toppen av ESP32-en, som betydelig reduserte plassbehovet. FeatherWing har også 3 mini-knapper på innsiden, som jeg tenker kunne blitt brukt til konfigurasjon, men jeg trengte GPIOs for å kontrollere alle pinsene fra LEDs.
             </p>
+
             <p>
               Loddet fargekodede ledninger med resistorer til hver RGB-pin, og en svart ledning på katode-pin og puttet på krympestrømper. 
             </p>
-            <img class="project_img" src="src/img" width="500px" alt="components" />
+            <img class="project_img" src="src/img/sp/esp32.jpg" width="500px" alt="components" />
           </section>
 
           <section>
             <h5 id="laser">Laserkutting og -gravering</h5>
-            <img class="project_img" src="src/img/sp/sp_laserkutt.png" width="200px" alt="laser sketch" />
             <p>
               Lastet opp skissen som vektorfil og redigerte den videre i Adobe Illustrator.
-              For å bruke printeren må artboardet være 1010mm x 710mm og alle linjer som skal kuttes være på 0,025 mm, mens det som skal graveres kan ha en annen tykkelse.
+              For å bruke printeren må artboardet være 101 mm x 710 mm og alle linjer som skal kuttes være på 0,025 mm, mens det som skal graveres kan ha en annen tykkelse.
               Materialet jeg brukte var plexiglass på ca 3.5mm.
             </p>
-            <img class="project_img" src="src/img/sp/" width="500px" alt="laser stuff" />
+            <img class="project_img" src="src/img/sp/sp_laserkutt.png" width="70px" alt="laser sketch" />
             <p>
               Oppdaget på første print at jeg fikk et par hull, fordi ikke alle strekene var i riktig tykkelse, og basert på designet av 3D-modellen så jeg at jeg hadde gjort noen feil med beregningen av avstandene mellom LEDS, noe jeg ordnet i andre omgang. Fikk også lastet opp 3D-filen som .dxf-fil til Illustrator for å sammenlikne.
             </p>
-            <img class="project_img" src="src/img/sp/" width="500px" alt="laser stuff" />
+            <img class="project_img" src="src/img/sp/sp_laserresultat.jpg" width="70px" alt="laser stuff" />
             <p>
-              PDF-filen som ble brukt til print ligger på github.
+              PDF-filen ligger på Github (lenke under ressurser).
             </p>
           </section>
 
           <section>
             <h5 id="3d">3D-modellering og -printing</h5>
-            <img class="project_img" src="src/img" width="500px" alt="3d stuff" />
+            <img class="project_img" src="src/img" width="500px" alt="3d modell gif" />
             <p>
               Den andre 3D-modellen ble basert på mer nøyaktige målinger tatt med digitalt 
-              skyvelær. Den består en grunndel og et lokk. La inn skisser for komponentene og la inn parametere for målingene og prøvde å holde komponentene adskilt med gitte måleverdier. Lastet opp en SVG av det jeg skulle laserkutte slik at jeg kunne finne plasseringen av LEDS og kunne designe toppen av boksen lettere.
+              skyvelær. Den består en grunndel og et lokk. La inn skisser for komponentene i Fusion 360 fra Autodesk, og la inn parametere for målingene og prøvde å holde komponentene adskilt med gitte måleverdier. Lastet opp en SVG av det jeg skulle laserkutte slik at jeg kunne finne plasseringen av LEDS og kunne designe toppen av boksen lettere.
               Brukte "Loft" for å koble sammen det nedsenkede knappefeltet med skjermfeltet.
             </p>
-
-            <p>
-              Printet dette med PETG på "0.20mm SPEED" med automatisk support ved 40 grader. Resultat før breadboards ble klistret sammen med arkitekturpapp og alle LEDs er skvist på plass: 
+           <p>
+              Printet dette med PETG på "0.20mm SPEED" med automatisk support ved 40 grader. Resultat før breadboards ble klistret sammen med arkitekturpapp og alle LEDs er skvist på plass.
             </p>
-            <img class="project_img" src="src/img" width="500px" alt="box" />
-
+            <img class="project_img" src="src/img/sp/3d_printed.jpg" width="500px" alt="box printed" />
+            <img class="project_img" src="src/img/sp/3d_sammensatt.jpg" width="500px" alt="good picture" />
             <p>
               Alt i alt ble det litt trangt til slutt, men jeg
               valgte å bruke en Dremel for å file bort litt av sideveggene slik
               at det ble plass til breadboards. Polerte så litt over slik at det
-              lukket seg litt mer. Siden jeg loddet og brukte krympestrømper på
+              lukket seg litt bedre. Overflaten der support-materiale var måtte files og poleres litt. Siden jeg loddet og brukte krympestrømper på
               ledningene, ble de tykkere enn jeg tenkte da jeg modellerte, siden
               jeg bare tok hensyn til selve pinsene, så jeg filte dem bredere
-              med dremelen. Slapp å printe en ny del så sparte de ressursene. En utfordring jeg gjerne skulle ha jobbet litt mer med er lokk-design, slik at det lukker seg pent. Enda en optimalisering kunne også ha vært å se litt mer på vinkler slik at mindre support-materiale kreves for å printe det. 
+              med dremelen. Slapp å printe en ny del så sparte de ressursene.
+            </p>
+            <img class="project_img" src="src/img/sp/3d_endring.jpg" width="500px" alt="box wit led" />
+            <img class="project_img" src="src/img/sp/3d_before_dremel.jpg" width="500px" alt="box before dremel" />
+            <img class="project_img" src="src/img/sp/3d_after_dremel.jpg" width="500px" alt="box after dremel" />
+            <p>
+              En utfordring jeg gjerne skulle ha jobbet litt mer med er lokk-design, slik at   det lukker seg pent. Enda en optimalisering kunne også ha vært å se litt mer på vinkler slik at mindre support-materiale kreves for å printe det. 
+            </p>
+
+            <p>
+              3mf-filen ligger på Github (lenke under ressurser).
             </p>
           </section>
 
@@ -325,16 +332,16 @@
                   Laste ned Arduino IDE
                 </li>
                 <li>
-                  Libraries for ESP32 og for skjerm, repo fra Github
+                  Legge til libraries for ESP32 og for skjerm, repo fra Github
                 </li>
                 <li>
-                  Velge board
+                  Velge board: ESP32 Dev Module
                 </li>
                 <li>
                   Velge port 
                 </li>
                 <li>
-                  Registrere alle komponentene, programmere og teste
+                  Registrere alle komponentene i koden, programmere og teste
                 </li>
               </ol> 
             </p>
@@ -350,23 +357,14 @@
               Det var en utfordring å få skjermen til å holde seg stabil og samtidig oppdatere verdier uten at delays kommer i veien. Til slutt fikk jeg vist startskjerm, velkomstskjerm og en klokke som endrer seg hvert minutt, dagens transportalternativ og i tillegg en negativ beskjed dersom man klikker på den røde knappen.
             </p>
             <p>
-              Koden ligger på Github.
+              Koden ligger på Github (lenke under ressurser).
             </p>
           </section>
 
-          <section id="further">
-            <h5>Videre</h5>
+          <section id="last-words">
+            <h5>Sluttord</h5>
             <p>
-              <li>Det</li>
-            </p>
-          </section>
-
-          <section>
-            <h5>Konklusjon</h5>
-            <p>
-              I kode-delen er det naturligvis et mål å kunne inkludere API fra
-              Yr.no. Dette fikk jeg ikke tid til i denne omgang, men jeg er
-              fornøyd med hvor mye jeg har lært i prosessen, og har lagt ned mye
+              Produktet er langt fra ferdig, og ting kunne ha blitt gjort annerledes, men jeg er fornøyd med hvor mye jeg har lært i prosessen, og har lagt ned mye
               arbeid i utviklingen av produktet, men kanskje mest med generelt layout, og mindre med finpuss og funksjonalitet. 
             </p>
           </section>
@@ -376,7 +374,7 @@
             <a
               class="link"
               id="github-src"
-              href="https://github.com/karoooooo/digifab/blob/main/src/sp"
+              href="https://github.com/karoooooo/digifab/tree/main/src/sp"
               >Klikk her å se filene på Github</a
             >
             <a
