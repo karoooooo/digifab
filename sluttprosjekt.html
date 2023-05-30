@@ -70,11 +70,15 @@
             <li><a href="#electro">Elektronikk</a></li>
             <li><a href="#laser">Laserkutting og -gravering</a></li>
             <li><a href="#3d">3D-modellering og -printing</a></li>
+            <li><a href="#code">Kode</a></li>
+            <li><a href="#further">Videre</a></li>
+            <li><a href="#resources">Ressurser</a></li>
+
           </ul>
         </nav>
         <section id="timestamp">
           <p>Opprettet: 26.05.23</p>
-          <p>Endret: 29.05.23</p>
+          <p>Endret: 30.05.23</p>
         </section>
       </aside>
       <main id="projects">
@@ -207,6 +211,12 @@
               Basert på skissen puttet jeg de elektroniske komponentene sammen
               og designet en 3D-modell for en boks basert på grove målinger og bilder som canvas for å plassere elementer relativt til hverandre.
             </p>
+            <img
+            class="project_img"
+            src="src/img/sp/"
+            width="500px"
+            alt="1prototype"
+          />
             <p>
               Eksporterte skissen og redigerte den som en vektorfil som kunne
               benyttes til laserkutting og -gravering med plexiglass. Printet boksen i PLA og
@@ -260,7 +270,7 @@
               breadboards for å se hvordan jeg skulle kombinere det med batteripakken og plexiglasset. Endte opp med 2 mini breadboards og klistret dem på en 3mm plate med arkitekturpapp for å jevne ut høydeforskjeller.
             </p>
             <p>
-              Erstattet skjermen fra første prototype med en 128x64 OLED-skjerm. Fikk hjelp med å lodde på stacking headers så OLED-skjermen kunne bli plassert på toppen av ESP32-en, som betydelig reduserte plassbehovet. FeatherWing har også 3 mini-knapper på innsiden,som jeg tenker kunne blitt brukt til          konfigurasjon, men jeg trengte GPIOs for å kontrollere alle pinsene fra LEDs.
+              Erstattet skjermen fra første prototype med en 128x64 OLED-skjerm. Fikk hjelp med å lodde på stacking headers så OLED-skjermen kunne bli plassert på toppen av ESP32-en, som betydelig reduserte plassbehovet. FeatherWing har også 3 mini-knapper på innsiden, som jeg tenker kunne blitt brukt til          konfigurasjon, men jeg trengte GPIOs for å kontrollere alle pinsene fra LEDs.
             </p>
             <p>
               Loddet fargekodede ledninger med resistorer til hver RGB-pin, og en svart ledning på katode-pin og puttet på krympestrømper. 
@@ -269,21 +279,30 @@
           </section>
 
           <section>
+            <h5 id="laser">Laserkutting og -gravering</h5>
+            <img class="project_img" src="src/img" width="500px" alt="laser stuff" />
+            <p>
+              Lastet opp skissen som vektorfil og redigerte den videre i Adobe Illustrator.
+              For å bruke printeren må artboardet være 1010mm x 710mm og alle linjer som skal kuttes være på 0,025 mm, mens det som skal graveres kan ha en annen tykkelse.
+              Materialet jeg brukte var plexiglass på ca 3.5mm.
+            </p>
+            <p>
+              Oppdaget på første print at jeg fikk et par hull, fordi ikke alle strekene var i riktig tykkelse, og basert på designet av 3D-modellen så jeg at jeg hadde gjort noen feil med beregningen av avstandene mellom LEDS, noe jeg ordnet i andre omgang. Fikk også lastet opp 3D-filen som .dxf-fil til Illustrator for å sammenlikne.
+            </p>
+          </section>
+
+          <section>
             <h5 id="3d">3D-modellering og -printing</h5>
             <img class="project_img" src="src/img" width="500px" alt="3d stuff" />
             <p>
               Den andre 3D-modellen ble basert på mer nøyaktige målinger tatt med digitalt 
               skyvelær. Den består en grunndel og et lokk. La inn skisser for komponentene og la inn parametere for målingene og prøvde å holde komponentene adskilt med gitte måleverdier.
-
-
-              LEDS - 
-              Batteri -
-
-              Brukte "Loft" for å koble sammen det nedsenkede knappefeltet med skjermfeltet. 
+              Kunne laste inn SVG av det jeg skulle laserkutte slik at jeg kunne finne plasseringen av LEDS og kunne designe toppen av boksen lettere.
+              Brukte "Loft" for å koble sammen det nedsenkede knappefeltet med skjermfeltet.
             </p>
 
             <p>
-              Resultat før breadboards ble klistret sammen med arkitekturpapp og alle LEDs er skvist på plass: 
+              Printet dette med PETG på "0.20mm SPEED" med automatisk support ved 40 grader. Resultat før breadboards ble klistret sammen med arkitekturpapp og alle LEDs er skvist på plass: 
             </p>
             <img class="project_img" src="src/img" width="500px" alt="box" />
 
@@ -298,17 +317,8 @@
             </p>
           </section>
 
-          <section>
-            <h5 id="laser">Laserkutting og -gravering</h5>
-            <img class="project_img" src="src/img" width="500px" alt="laser stuff" />
-            <p>
-              Fusion printer Plexiglass 3.5mm ca Gravering som blir til fargen
-              som lyser gjennom med LED
-            </p>
-          </section>
-
-          <section>
-            <h5>Kode</h5>
+          <section >
+            <h5 id="code">Kode</h5>
             <p>
               Prosessen med å sette opp en ESP32:
               <ol>
@@ -331,7 +341,7 @@
                   Teste med eksempelkode
                 </li>
                 <li>
-                  Lage egen kode basert på alle komponentene
+                  Registrere alle komponentene og programmere
                 </li>
               </ol> 
             </p>
@@ -340,18 +350,17 @@
               Kodens funksjonalitet ligger mest i det å få vise beskjeder på
               skjermen og ha lys som reagerer på knappetrykk. Jeg er fornøyd med
               å ha lagd en del funksjoner slik at gjenbruk av kode går bedre. 4
-              RGB-leds trenger 12 ulike variabler, så det er likevel en del å
+              RGB-leds trenger 12 ulike variabler, så det er men del å
               holde styr på. Jeg fikk til å koble opp enheten til WiFi, men
-              valgte å ikke ha dette med på koden til slutt. Komplisert: delays
-              - alt stopper opp
-
+              valgte å ikke ha dette med på koden til slutt. Ønsket å ha med 
             </p>
 
             <p>
               På grunn av loddingen var det skjørt å håndtere, som resulterte i at T ikke kan nå B og A ikke kan nå G. 
             </p>
           </section>
-          <section>
+
+          <section id="further">
             <h5>Videre</h5>
             <p>
               <li>Det</li>
